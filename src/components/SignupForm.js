@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function SignupForm() {
   const [formData, setFormData] = useState({
@@ -53,7 +53,6 @@ function SignupForm() {
       return;
     }
 
-    // Save data to localStorage
     localStorage.setItem("userData", JSON.stringify(formData));
     setSuccess("Sign-Up Successful! Redirecting to Login...");
     setTimeout(() => navigate("/login"), 2000);
@@ -118,9 +117,12 @@ function SignupForm() {
 
         <button type="submit">Register</button>
       </form>
+
+      <p className="bottom-link">
+        Already have an account? <Link to="/login">Login here</Link>
+      </p>
     </div>
   );
 }
 
 export default SignupForm;
-

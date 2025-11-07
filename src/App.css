@@ -10,29 +10,43 @@ body {
 }
 
 
-.nav-buttons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 25px;
-  gap: 20px; 
+.welcome-container {
+  text-align: center;
+  color: white;
+  animation: fadeIn 1s ease-in;
 }
 
-.nav-buttons button {
+.welcome-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.welcome-container p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.welcome-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.welcome-buttons button {
   background: linear-gradient(135deg, #ff6a00, #ee0979);
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border-radius: 25px;
-  font-weight: 500;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.nav-buttons button:hover {
+.welcome-buttons button:hover {
   transform: scale(1.05);
   background: linear-gradient(135deg, #ee0979, #ff6a00);
 }
-
 
 .form-container {
   background-color: #ffffff;
@@ -121,18 +135,35 @@ button:hover {
 }
 
 
+.bottom-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.bottom-link a {
+  color: #0083b0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.bottom-link a:hover {
+  text-decoration: underline;
+}
+
+
 @media (max-width: 480px) {
   .form-container {
     padding: 20px;
     max-width: 90%;
   }
 
-  .nav-buttons {
+  .welcome-buttons {
     flex-direction: column;
     gap: 10px;
   }
 
-  .nav-buttons button {
+  .welcome-buttons button {
     width: 100%;
   }
-} 
+}
+ 
